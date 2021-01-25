@@ -1,8 +1,6 @@
 <img src="https://media.giphy.com/media/ZaF5ecBGv9np9oX3vH/source.gif" alt="giphy Patrick eating burgers" />
 
 <div id="burgerToEat">
-    <h3>Burgers To Eat!</h3>
-
     {{#each burgers}}
     {{#unless devoured}}
 
@@ -18,8 +16,6 @@
 </div>
 
 <div id="devouredBurgers">
-    <h3>Devoured Burgers!</h3>
-
     {{#each burgers}}
     {{#if devoured}}
     <div id="text">
@@ -36,5 +32,5 @@
 <form id="addBurgerForm">
     <input type="text" id="add-burger">
     <button type="submit" id="submit">Submit</button>
-    <p>Enter a burger you want to eat and click the "submit" button</p>
+    <p>Enter a burger you want to eat and click the "Submit" button!</p>
 </form>

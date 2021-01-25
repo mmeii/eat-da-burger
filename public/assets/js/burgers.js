@@ -1,7 +1,7 @@
 //wait to attach handlers until DOM is fully loaded
 $(function () {
     //function on click, change burger state to devoured_burger
-    $(".devoure_burger").on("click", function (event) {
+    $("#devoure_burger").on("click", function (event) {
         let id = $(this).data("id");
         let newState = $(this).data("newstate");
 
@@ -10,7 +10,7 @@ $(function () {
         };
 
         // send the PUT request
-        $.ajax("/api/cats/" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newBurgerState
         }).then(() => {
