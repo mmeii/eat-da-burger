@@ -3,7 +3,7 @@ const { query } = require("../config/connection.js");
 const connection = require("../config/connection.js");
 
 // helper function for SQL syntax
-printQuestionMarks((num) => {
+function printQuestionMarks(num) {
     let arr = [];
 
     for (let i = 0; i < num; i++) {
@@ -11,10 +11,10 @@ printQuestionMarks((num) => {
     }
 
     return arr.toString();
-});
+};
 
 //helper function to convert object key/value paris to SQL syntax
-objToSql((ob) => {
+function objToSql(ob) {
     let arr = [];
 
     for (let key in ob) {
@@ -29,7 +29,7 @@ objToSql((ob) => {
     }
 
     return arr.toString();
-});
+};
 
 // object for all SQL statement functions
 const orm = {
