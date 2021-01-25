@@ -7,7 +7,11 @@ const burger = require("../models/burger.js");
 //Create the router for the app
 router.get("/", (req, res) => {
     burger.all((data) => {
-        res.render("index", { burgers: data });
+        let hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
     });
 });
 
