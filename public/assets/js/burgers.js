@@ -1,7 +1,7 @@
 //wait to attach handlers until DOM is fully loaded
 $(function () {
     //function on click, change burger state to devoured_burger
-    $("#devoure_burger").on("click", function (event) {
+    $(".devoure-burger").on("click", function (event) {
         let id = $(this).data("id");
         let newState = $(this).data("newstate");
 
@@ -25,22 +25,25 @@ $(function () {
         event.preventDefault();
 
         let newBurger = {
-            burger_name: $("#burgerToEat").val().trim()
+            burger_name: $("#add-burger").val().trim()
         };
 
-        console.log(newBurger);
-
         //send the POST request
-        $.post("/api/burgers", newBurger).then(() => {
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+        }).then(() => {
+            console.log("created new burger");
+            //reload the page for updated list
             location.reload();
-        });
+        })
     });
 
     $(".delete-burger").on("click", function (event) {
         let id = $(this).data("id");
 
         //send DELETE request
-        $.ajax("/api/cats/" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(() => {
             console.log("deleted burger", id);
