@@ -20,7 +20,6 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 
   `http://localhost:8080`
 
-* You will see this as the starting screen
   ![Eat-Da-Burger Screnshot](./public/assets/eat-da-burger.png)
 
 * Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- indicating the burger is waiting to be devoured.
@@ -33,7 +32,7 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 
 * Websites
   * [Github](https://github.com/mmeii/eat-da-burger)
-  * [Live Heroku App]()
+  * [Live Heroku App](https://cryptic-reef-17921.herokuapp.com/)
 
 ## Features
 
