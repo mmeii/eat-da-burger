@@ -10,7 +10,7 @@
         <p>{{id}}. {{burger_name}}</p>
     </div>
     <div id="buttons">
-        <button data-id="{{id}}" class="devoure">Devoure it!</button>
+        <button data-id="{{id}}" class="devoure-burger">Devoure it!</button>
     </div>
 
     {{/unless}}
@@ -26,15 +26,15 @@
         <p>{{id}}. {{burger_name}}</p>
     </div>
     <div id="buttons">
-        <button data-id="{{id}}" class="delete">Delete</button>
+        <button data-id="{{id}}" class="delete-burger">Delete</button>
     </div>
 
     {{/if}}
     {{/each}}
 </div>
 
-<form>
-    <input type="text" id="addBurger">
+<form id="addBurgerForm">
+    <input type="text" id="add-burger">
     <button type="submit" id="submit">Submit</button>
     <p>Enter a burger you want to eat and click the "submit" button</p>
 </form>
