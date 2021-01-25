@@ -1,36 +1,42 @@
-<img src="https://media.giphy.com/media/ZaF5ecBGv9np9oX3vH/source.gif" alt="giphy Patrick eating burgers" />
+<div id="container">
 
-<div id="burgerToEat">
-    {{#each burgers}}
-    {{#unless devoured}}
-
-    <div id="text">
-        <p>{{id}}. {{burger_name}}</p>
-    </div>
-    <div id="buttons">
-        <button data-id="{{id}}" class="devoure-burger">Devoure it!</button>
+    <div id="image" class="box">
+        <img src="https://media.giphy.com/media/ZaF5ecBGv9np9oX3vH/source.gif" alt="giphy Patrick eating burgers" />
     </div>
 
-    {{/unless}}
-    {{/each}}
+    <div id="middle">
+        <div id="burgerToEat">
+            {{#each burgers}}
+            {{#unless devoured}}
+
+            <div class="text">
+                {{burger_name}}
+                <button data-id="{{id}}" class="devoure-burger">Devoure it!</button>
+            </div>
+
+            {{/unless}}
+            {{/each}}
+        </div>
+
+        <div id="devouredBurgers">
+            {{#each burgers}}
+            {{#if devoured}}
+
+            <div class="text">
+                {{burger_name}}
+                <button data-id="{{id}}" class="delete-burger">Delete it!</button>
+            </div>
+
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <form id="addBurgerForm">
+        <input type="text" id="add-burger">
+        <br>
+        <button type="submit" id="submit">Submit</button>
+        <p>Enter a burger you want to eat and click the "Submit" button!</p>
+    </form>
+
 </div>
-
-<div id="devouredBurgers">
-    {{#each burgers}}
-    {{#if devoured}}
-    <div id="text">
-        <p>{{id}}. {{burger_name}}</p>
-    </div>
-    <div id="buttons">
-        <button data-id="{{id}}" class="delete-burger">Delete</button>
-    </div>
-
-    {{/if}}
-    {{/each}}
-</div>
-
-<form id="addBurgerForm">
-    <input type="text" id="add-burger">
-    <button type="submit" id="submit">Submit</button>
-    <p>Enter a burger you want to eat and click the "Submit" button!</p>
-</form>
