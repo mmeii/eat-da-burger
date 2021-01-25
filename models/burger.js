@@ -3,22 +3,22 @@ const orm = require("../config/orm.js");
 
 const burger = {
     all: (cb) => {
-        orm.all("burgers", (res) => {
+        orm.all("burger", (res) => {
             cb(res);
         });
     },
     create: (cols, vals, cb) => {
-        orm.create("burgers", cols, vals, (res) => {
+        orm.create("burger", cols, vals, (res) => {
             cb(res);
         });
     },
     update: (objColVals, condition, cb) => {
-        orm.update("burgers", objColVals, condition, (res) => {
+        orm.update("burger", objColVals, condition, (res) => {
             cb(res);
         });
     },
     delete: (condition, cb) => {
-        orm.delete("burgers", condition, (res) => {
+        orm.delete("burger", condition, (res) => {
             cb(res);
         });
     }
